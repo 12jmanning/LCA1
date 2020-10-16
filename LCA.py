@@ -57,6 +57,6 @@ print("LCA(4,6) = ", findLCA(root, 4, 6).key)
 print("LCA(3,4) = ", findLCA(root, 3, 4).key)
 
 print("LCA(2,4) = ", findLCA(root, 2, 4).key)
-
+print("LCA(1,4) = ", findLCA(root, 1, 4).key)
 
 # This code is contributed by Nikhil Kumar Singh(nickzuck_007)
