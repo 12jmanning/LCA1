@@ -2,6 +2,8 @@
 # traversal of Binary tree
 # Copied from https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
 # A binary tree node
+from binarytree import Node
+
 class Node:
 
     # Constructor to create a new tree node
@@ -30,6 +32,12 @@ def findLCA(root, n1, n2):
     left_lca = findLCA(root.left, n1, n2)
     right_lca = findLCA(root.right, n1, n2)
 
+   # if left_lca is None:
+       # return None
+
+   # if right_lca is None:
+     #   return None
+
     # If both of the above calls return Non-NULL, then one key
     # is present in once subtree and other is present in other,
     # So this node is the LCA
@@ -43,20 +51,20 @@ def findLCA(root, n1, n2):
 # Driver program to test above function
 
 # Let us create a binary tree given in the above example
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(5)
-root.right.left = Node(6)
-root.right.right = Node(7)
-print("LCA(4,5) = ", findLCA(root, 4, 5).key)
+#root = Node(1)
+#root.left = Node(2)
+#root.right = Node(3)
+#root.left.left = Node(4)
+#root.left.right = Node(5)
+#root.right.left = Node(6)
+#root.right.right = Node(7)
+#print("LCA(4,5) = ", findLCA(root, 4, 5).key)
 
-print("LCA(4,6) = ", findLCA(root, 4, 6).key)
+#print("LCA(4,6) = ", findLCA(root, 4, 6).key)
 
-print("LCA(3,4) = ", findLCA(root, 3, 4).key)
+#print("LCA(3,4) = ", findLCA(root, 3, 4).key)
 
-print("LCA(2,4) = ", findLCA(root, 2, 4).key)
-print("LCA(1,4) = ", findLCA(root, 1, 4).key)
+#print("LCA(2,4) = ", findLCA(root, 2, 4).key)
+#print("LCA(1,4) = ", findLCA(root, 1, 4).key)
 
 # This code is contributed by Nikhil Kumar Singh(nickzuck_007)
